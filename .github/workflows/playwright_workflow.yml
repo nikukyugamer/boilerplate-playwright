@@ -1,0 +1,36 @@
+name: Playwright Workflow
+
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - 'v*.*.*'
+  workflow_dispatch:
+
+jobs:
+  playwright:
+    name: Playwright ワークフロー
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+    - name: コードをチェックアウトする
+      uses: actions/checkout@v3
+    - uses: actions/checkout@v3
+    - name: Node.js のセットアップを行う
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: yarn
+        cache-dependency-path: yarn.lock
+    - name: $ yarn install する
+      run: |
+        yarn install --frozen-lockfile
+    - name: ESLint を実行する
+      run: |
+        npx eslint
+    - name: $ yarn build する
+      run: |
+        yarn build
