@@ -1,0 +1,13 @@
+.github/
+.history/
+.vscode/
+@types/
+output/
+tmp/
+.eslintignore
+.eslintrc.js
+.prettierignore
+.prettierrc.js
+app.ts
+renovate.json
+tsconfig.json
