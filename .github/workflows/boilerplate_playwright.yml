@@ -10,12 +10,12 @@ on:
 
 jobs:
   yarn_install:
-    uses: ./.github/workflows/steps/10_yarn_install.yml
+    uses: ./.github/workflows/_10_yarn_install.yml
 
   eslint:
     needs: yarn_install
-    uses: ./.github/workflows/steps/20_eslint.yml
+    uses: ./.github/workflows/_20_eslint.yml
 
   yarn_build:
     needs: eslint
-    uses: ./.github/workflows/steps/30_yarn_build.yml
+    uses: ./.github/workflows/_30_yarn_build.yml
