@@ -1,0 +1,50 @@
+// $ mkdir -p .vscode && cp .vscode-settings.json.jsonc .vscode/settings.json
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // css, scss ファイルは Stylelint でフォーマットするため、 Prettier によるフォーマットを回避
+  "css.validate": false,
+  "[css]": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "scss.validate": false,
+  "[scss]": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "eslint.packageManager": "yarn",
+  "prettier.configPath": "/home/USERNAME/.ghq/github.com/ORGANIZATION/REPOSITORY_NAME/.prettierrc.js",
+  "prettier.ignorePath": "/home/USERNAME/.ghq/github.com/ORGANIZATION/REPOSITORY_NAME/.prettierignore",
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.withNodeModules": true,
+  "stylelint.packageManager": "yarn",
+  "stylelint.configFile": "/home/USERNAME/.ghq/github.com/ORGANIZATION/REPOSITORY_NAME/stylelint.config.js",
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "scss"
+  ],
+  "jestrunner.configPath": "/home/USERNAME/.ghq/github.com/ORGANIZATION/REPOSITORY_NAME/jest.config.js"
+}
