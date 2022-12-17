@@ -1,0 +1,26 @@
+name: ESLint
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  yarn_install:
+    name: $ npx eslint する
+    runs-on: ubuntu-22.04
+    steps:
+      - name: コードをチェックアウトする
+        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - name: Node.js のセットアップを行う
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.node-version'
+          cache: yarn
+          cache-dependency-path: yarn.lock
+      - name: $ yarn install する
+        run: |
+          yarn install --frozen-lockfile
+      - name: ESLint を実行する
+        run: |
+          npx eslint
