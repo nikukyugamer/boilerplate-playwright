@@ -20,7 +20,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "echo 'yarn build'",
+    "build": "tsc",
     "execute": "ts-node --files src/app.ts",
     "lint": "eslint"
   }
