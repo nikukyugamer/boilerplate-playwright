@@ -2,7 +2,7 @@
   "name": "boilerplate-playwright",
   "version": "0.0.1",
   "dependencies": {
-    "commander": "^9.4.1",
+    "commander": "^10.0.0",
     "dotenv": "^16.0.3",
     "fast-csv": "^4.3.6",
     "playwright": "^1.28.1"
