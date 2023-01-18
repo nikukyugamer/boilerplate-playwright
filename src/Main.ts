@@ -6,6 +6,8 @@ dotenv.config()
 
 import { FetchHatenaFotolife } from './FetchHatenaFotolife'
 import { FetchKakuninkunAndKakuninkunPlus } from './FetchKakuninkunAndKakuninkunPlus'
+import { FetchX68000Z } from './FetchX68000Z'
+import { DownloadFile } from './DownloadFile'
 
 export class Main {
   HELLO: string
@@ -27,6 +29,18 @@ export class Main {
     const currentBrowserText = await kakuninkun.exec()
 
     return currentBrowserText
+  }
+
+  async downloadFile() {
+    const downloadFile = new DownloadFile()
+
+    await downloadFile.exec()
+  }
+
+  async x68000z() {
+    const x68000z = new FetchX68000Z()
+
+    await x68000z.exec()
   }
 
   async hatenaFotolife() {

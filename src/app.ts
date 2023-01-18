@@ -2,12 +2,7 @@ import { Main } from './Main'
 
 const main = new Main()
 
+// ファイルダウンロード
 ;(async () => {
-  const currentBrowserName = await main.misterConfirm()
-
-  console.log({ currentBrowserName })
-})()
-
-;(async () => {
-  await main.hatenaFotolife()
+  await main.downloadFile()
 })()
